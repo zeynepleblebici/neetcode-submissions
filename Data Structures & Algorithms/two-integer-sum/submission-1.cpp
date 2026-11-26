@@ -1,0 +1,19 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result(2);
+        int n=nums.size();
+        for (int i=0; i<n-1; i++)
+        {
+            for(int j=1; j<n; j++)
+            {
+                if(nums[i]+nums[j]==target && i!=j)
+                {
+                    result[0]= min(i,j);
+                    result[1]= max(i,j);
+                    return result;
+                }
+            }
+        }
+    }
+};
